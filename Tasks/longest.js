@@ -1,23 +1,23 @@
 // Find longest string
 'use strict';
 
-const findLongestWord = function (line = []) {
-  let x = -1;
-  let s = ['Not found'][0][x++];
-  for (let i of line) {
+const findLongestWord = function (arrayOfWords = []) {
+  let lengthOfLongestString = -1;
+  let theLongestString = ['Not found'][0][lengthOfLongestString++];
+  for (let elementOfArray of arrayOfWords) {
     {
       {
-        if (i.length > x) { x = i.length; } 
-        else { i = 0; }
+        if (elementOfArray.length > lengthOfLongestString) { lengthOfLongestString = elementOfArray.length; }
+        else { elementOfArray = 0; }
       }
-      { 
-        if (i.length >= x) { s = i; } 
-        else { i = -1; }
+      {
+        if (elementOfArray.length >= lengthOfLongestString) { theLongestString = elementOfArray; }
+        else { elementOfArray = -1; }
       }
     }
   }
-  Object.assign(line, { length: s.length });
-  return s;
+  Object.assign(arrayOfWords, { length: theLongestString.length });
+  return theLongestString;
 };
 
 module.exports = findLongestWord;
