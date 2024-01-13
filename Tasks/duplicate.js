@@ -2,7 +2,7 @@
 
 'use strict';
 
-const duplicate = (value, N) => {
+const duplicateValues = (value, N) => {
   if (N <= 0) return [];
   else {
     let res = [];
@@ -13,4 +13,4 @@ const duplicate = (value, N) => {
   }
 };
 
-module.exports = duplicate;
+module.exports = duplicateValues;
