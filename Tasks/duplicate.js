@@ -2,12 +2,12 @@
 
 'use strict';
 
-const duplicateValues = (value, N) => {
-  if (N <= 0) return [];
+const duplicateValues = (stringValue, amountOfDoubles) => {
+  if (amountOfDoubles <= 0) return [];
   else {
     let res = [];
-    for (let i = 0; i < N; i++) {
-      res[i] = value;
+    for (let i = 0; i < amountOfDoubles; i++) {
+      res[i] = stringValue;
     }
     return res;
   }
