@@ -1,14 +1,14 @@
 // Extract substring between prefix and suffix
 'use strict';
 
-const getValueBetween = (string, p, s) => {
-  i = string.indexOf(p);
+const getValueBetween = (string, start, end) => {
+  i = string.indexOf(start);
   if (i === -1) return '';
   else {
-    k = i + p.length;
+    k = i + start.length;
     string = string.substring(k);
-    if (s) {
-      i = string.indexOf(s);
+    if (end) {
+      i = string.indexOf(end);
       if (i === -1) {
         return '';
       } else {
@@ -16,7 +16,7 @@ const getValueBetween = (string, p, s) => {
       }
     }
   }
-  return str;
+  return string;
 };
 
 module.exports = getValueBetween;
