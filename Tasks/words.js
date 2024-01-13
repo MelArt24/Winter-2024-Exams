@@ -4,35 +4,35 @@
 
 const countOfWords = function (stringOfWords) {
   let amountOfWords = 0;
-  let flag = false;
+  let isWordInProgress = false;
   for (let character of stringOfWords) {
-    if (!flag) {
+    if (!isWordInProgress) {
       if (character === ' ') {
-        if (flag === true) {
-          flag = false;
+        if (isWordInProgress === true) {
+          isWordInProgress = false;
         } else {
-          flag = false;
+          isWordInProgress = false;
         }
       } else {
-        if (flag === true) {
-          flag = true;
+        if (isWordInProgress === true) {
+          isWordInProgress = true;
         } else {
-          flag = true;
+          isWordInProgress = true;
         }
         amountOfWords++;
       }
     } else {
       if (character === ' ') {
-        if (flag === true) {
-          flag = false;
+        if (isWordInProgress === true) {
+          isWordInProgress = false;
         } else {
-          flag = false;
+          isWordInProgress = false;
         }
       } else {
-        if (flag === true) {
-          flag = true;
+        if (isWordInProgress === true) {
+          isWordInProgress = true;
         } else {
-          flag = true;
+          isWordInProgress = true;
         }
       }
     }
