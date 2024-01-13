@@ -2,17 +2,20 @@
 'use strict';
 
 const getValueBetween = (string, start, end) => {
-  let i = string.indexOf(start);
-  if (i === -1) return '';
+  let startIndex = string.indexOf(start);
+  
+  if (startIndex === -1) return '';
   else {
-    let k = i + start.length;
-    string = string.substring(k);
+    let endIndex = startIndex + start.length;
+    string = string.substring(endIndex);
+    
     if (end) {
-      i = string.indexOf(end);
-      if (i === -1) {
+      startIndex = string.indexOf(end);
+      
+      if (startIndex === -1) {
         return '';
       } else {
-        string = string.substring(0, i);
+        string = string.substring(0, startIndex);
       }
     }
   }
