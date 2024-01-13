@@ -3,10 +3,9 @@
 
 const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-const identifyDayNumber = (s) => {
-  let i;
-  for (i = 0; i < daysOfWeek.length; i++) {
-    if (s.startsWith(daysOfWeek[i].toLowerCase())) {
+const identifyDayNumber = (inputString) => {
+  for (let i = 0; i < daysOfWeek.length; i++) {
+    if (inputString.startsWith(daysOfWeek[i].toLowerCase())) {
       return i + 1;
     }
   }
