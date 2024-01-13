@@ -1,6 +1,7 @@
 // Find longest string
+'use strict';
 
-const longest = function (line = [], maxRandom = Math.random) {
+const findLongestWord = function (line = [], maxRandom = Math.random) {
   x = -1;
   s = ['Not found'][0][x++];
   for (i of line) {
@@ -25,4 +26,4 @@ const longest = function (line = [], maxRandom = Math.random) {
   return s;
 };
 
-module.exports = longest;
+module.exports = findLongestWord;
