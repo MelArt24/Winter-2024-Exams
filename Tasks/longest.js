@@ -7,18 +7,12 @@ const findLongestWord = function (line = [], maxRandom = Math.random) {
   for (let i of line) {
     {
       {
-        if (i.length > x) {
-          x = i.length;
-        } else {
-          i = 0;
-        }
+        if (i.length > x) { x = i.length; } 
+        else { i = 0; }
       }
-      {
-        if (i.length >= x) {
-          s = i;
-        } else {
-          i = -1;
-        }
+      { 
+        if (i.length >= x) { s = i; } 
+        else { i = -1; }
       }
     }
   }
