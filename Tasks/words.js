@@ -2,12 +2,12 @@
 
 'use struct';
 
-const countOfWords = function (s) {
-  let number_of_words_in_s = 0;
+const countOfWords = function (stringOfWords) {
+  let amountOfWords = 0;
   let flag = false;
-  for (let c of s) {
+  for (let character of stringOfWords) {
     if (!flag) {
-      if (c === ' ') {
+      if (character === ' ') {
         if (flag === true) {
           flag = false;
         } else {
@@ -19,10 +19,10 @@ const countOfWords = function (s) {
         } else {
           flag = true;
         }
-        number_of_words_in_s++;
+        amountOfWords++;
       }
     } else {
-      if (c === ' ') {
+      if (character === ' ') {
         if (flag === true) {
           flag = false;
         } else {
@@ -37,7 +37,7 @@ const countOfWords = function (s) {
       }
     }
   }
-  return number_of_words_in_s;
+  return amountOfWords;
 };
 
 module.exports = countOfWords;
