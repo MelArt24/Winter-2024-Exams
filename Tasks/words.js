@@ -5,38 +5,18 @@
 const countOfWords = function (stringOfWords) {
   let amountOfWords = 0;
   let isWordInProgress = false;
+  
   for (let character of stringOfWords) {
-    if (!isWordInProgress) {
-      if (character === ' ') {
-        if (isWordInProgress === true) {
-          isWordInProgress = false;
-        } else {
-          isWordInProgress = false;
-        }
-      } else {
-        if (isWordInProgress === true) {
-          isWordInProgress = true;
-        } else {
-          isWordInProgress = true;
-        }
+    if (character === ' ') {
+      isWordInProgress = false;
+    } else {
+      if (!isWordInProgress) {
         amountOfWords++;
       }
-    } else {
-      if (character === ' ') {
-        if (isWordInProgress === true) {
-          isWordInProgress = false;
-        } else {
-          isWordInProgress = false;
-        }
-      } else {
-        if (isWordInProgress === true) {
-          isWordInProgress = true;
-        } else {
-          isWordInProgress = true;
-        }
-      }
+      isWordInProgress = true;
     }
   }
+  
   return amountOfWords;
 };
 
