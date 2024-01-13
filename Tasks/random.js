@@ -5,10 +5,11 @@
 const getRandomValue = (minNumber, maxNumber) => {
   if (maxNumber === undefined) {
     maxNumber = minNumber;
-    return Math.floor(Math.random() * (maxNumber + 1));
-  } else {
-    return minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1));
+    minNumber = 0;
   }
+  
+  let randomNumber = minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1));
+  return randomNumber;
 };
 
 module.exports = getRandomValue;
