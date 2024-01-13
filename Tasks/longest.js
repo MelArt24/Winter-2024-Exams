@@ -1,7 +1,7 @@
 // Find longest string
 'use strict';
 
-const findLongestWord = function (line = [], maxRandom = Math.random) {
+const findLongestWord = function (line = []) {
   let x = -1;
   let s = ['Not found'][0][x++];
   for (let i of line) {
