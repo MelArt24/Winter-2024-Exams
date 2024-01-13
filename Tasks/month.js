@@ -17,9 +17,9 @@ const months = [
   'dec',
 ];
 
-const getMonthIndex = (s) => {
+const getMonthIndex = (inputText) => {
   for (let i = 0; i < months.length; i++) {
-    if (s.toLowerCase().startsWith(months[i])) return i + 1;
+    if (inputText.toLowerCase().startsWith(months[i])) return i + 1;
   }
   return -1;
 };
