@@ -2,7 +2,9 @@
 'use strict';
 
 const getRandomElement = (arrayOfElements) => {
-  arrayOfElements = arrayOfElements[Math.floor(Math.random() * arr.length)];
+  if (arrayOfElements.length === 0) { return undefined; }
+  
+  arrayOfElements = arrayOfElements[Math.floor(Math.random() * arrayOfElements.length)];
   return arrayOfElements;
 };
 
