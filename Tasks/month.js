@@ -20,7 +20,9 @@ const months = [
 const getMonthIndex = (inputText) => {
   const lowerInput = inputText.toLowerCase();
   for (let i = 0; i < months.length; i++) {
-    if (lowerInput.startsWith(months[i])) return i + 1;
+    if (lowerInput.indexOf(months[i]) === 0) {    
+      return i + 1;
+    }
   }
   return -1;
 };
