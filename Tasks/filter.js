@@ -2,7 +2,7 @@
 
 'use strict';
 
-const Filter = (T, t) => {
+const filterOfValues = (T, t) => {
   const remove = [];
   for (let C of T) {
     let x = T.indexOf(C);
@@ -14,4 +14,4 @@ const Filter = (T, t) => {
   return T;
 };
 
-module.exports = Filter;
+module.exports = filterOfValues;
