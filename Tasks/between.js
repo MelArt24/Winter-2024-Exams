@@ -3,24 +3,20 @@
 
 const getValueBetween = (string, start, end) => {
   let startIndex = string.indexOf(start);
-
-  const SUBSTRING_IS_NOT_FOUND = -1;
   
+  const SUBSTRING_IS_NOT_FOUND = -1;
+
   if (startIndex === SUBSTRING_IS_NOT_FOUND) return '';
-  else {
-    let endIndex = startIndex + start.length;
-    string = string.substring(endIndex);
-    
-    if (end) {
-      startIndex = string.indexOf(end);
-      
-      if (startIndex === SUBSTRING_IS_NOT_FOUND) {
-        return '';
-      } else {
-        string = string.substring(0, startIndex);
-      }
-    }
+
+  startIndex += start.length;
+
+  if (end) {
+    let endIndex = string.indexOf(end, startIndex);
+    string = endIndex !== SUBSTRING_IS_NOT_FOUND ? string.substring(startIndex, endIndex) : '';
+  } else {
+    string = string.substring(startIndex);
   }
+
   return string;
 };
 
