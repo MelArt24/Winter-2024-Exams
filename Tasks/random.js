@@ -2,12 +2,12 @@
 
 'use strict';
 
-const getRandomValue = (min, max) => {
-  if (max === undefined) {
-    max = min;
-    return Math.floor(Math.random() * (max + 1));
+const getRandomValue = (minNumber, maxNumber) => {
+  if (maxNumber === undefined) {
+    maxNumber = minNumber;
+    return Math.floor(Math.random() * (maxNumber + 1));
   } else {
-    return min + Math.floor(Math.random() * (max - min + 1));
+    return minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1));
   }
 };
 
