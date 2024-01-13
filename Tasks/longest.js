@@ -12,7 +12,6 @@ const findLongestWord = function (arrayOfWords = []) {
     }
   }
 
-  arrayOfWords.length = maxLength;
   return theLongestString;
 };
 
