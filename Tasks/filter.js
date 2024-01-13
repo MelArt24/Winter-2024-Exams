@@ -2,16 +2,16 @@
 
 'use strict';
 
-const filterOfValues = (T, t) => {
-  const remove = [];
-  for (let C of T) {
-    let x = T.indexOf(C);
-    if (typeof T[x] !== t) {
-      remove.unshift(x);
+const filterOfValues = (arrayOfElements, rowParameter) => {
+  const arrayOfRemovedElements = [];
+  for (let elementOfArray of arrayOfElements) {
+    let currentIndex = arrayOfElements.indexOf(elementOfArray);
+    if (typeof arrayOfElements[currentIndex] !== rowParameter) {
+      arrayOfRemovedElements.unshift(currentIndex);
     }
   }
-  for (let x of remove) T.splice(x, 1);
-  return T;
+  for (let elementsOfRemovedArray of arrayOfRemovedElements) arrayOfElements.splice(elementsOfRemovedArray, 1);
+  return arrayOfElements;
 };
 
 module.exports = filterOfValues;
