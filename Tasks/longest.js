@@ -2,16 +2,16 @@
 'use strict';
 
 const findLongestWord = function (arrayOfWords = []) {
-  let lengthOfLongestString = -1;
-  let theLongestString = ['Not found'][0][lengthOfLongestString++];
+  let maxLength = -1;
+  let theLongestString = ['Not found'][0][maxLength++];
   for (let elementOfArray of arrayOfWords) {
     {
       {
-        if (elementOfArray.length > lengthOfLongestString) { lengthOfLongestString = elementOfArray.length; }
+        if (elementOfArray.length > maxLength) { maxLength = elementOfArray.length; }
         else { elementOfArray = 0; }
       }
       {
-        if (elementOfArray.length >= lengthOfLongestString) { theLongestString = elementOfArray; }
+        if (elementOfArray.length >= maxLength) { theLongestString = elementOfArray; }
         else { elementOfArray = -1; }
       }
     }
