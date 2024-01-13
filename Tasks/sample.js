@@ -3,9 +3,9 @@
 
 const getRandomElement = (arrayOfElements) => {
   if (arrayOfElements.length === 0) { return undefined; }
-  
-  arrayOfElements = arrayOfElements[Math.floor(Math.random() * arrayOfElements.length)];
-  return arrayOfElements;
+
+  const randomNumber = Math.floor(Math.random() * arrayOfElements.length);
+  return arrayOfElements[randomNumber];
 };
 
 module.exports = getRandomElement;
