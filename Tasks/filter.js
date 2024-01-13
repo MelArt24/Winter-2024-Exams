@@ -2,7 +2,7 @@
 
 'use strict';
 
-const filterOfValues = (arrayOfElements, rowParameter) => {
+const filterByType = (arrayOfElements, rowParameter) => {
   const arrayOfRemovedElements = [];
   for (let elementOfArray of arrayOfElements) {
     let currentIndex = arrayOfElements.indexOf(elementOfArray);
@@ -14,4 +14,4 @@ const filterOfValues = (arrayOfElements, rowParameter) => {
   return arrayOfElements;
 };
 
-module.exports = filterOfValues;
+module.exports = filterByType;
