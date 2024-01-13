@@ -2,10 +2,10 @@
 'use strict';
 
 const getValueBetween = (string, start, end) => {
-  i = string.indexOf(start);
+  let i = string.indexOf(start);
   if (i === -1) return '';
   else {
-    k = i + start.length;
+    let k = i + start.length;
     string = string.substring(k);
     if (end) {
       i = string.indexOf(end);
